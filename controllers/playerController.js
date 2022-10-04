@@ -1,4 +1,4 @@
-// Loading our Model of fruit
+// Loading our Model of player
 const Player = require('../models/player')
 
 // Bring in seed data
@@ -38,7 +38,7 @@ const createNewPlayer = (req, res) => {
         if (err) {
             res.status(400).json(err)
         } else {
-            res.status(200).redirect('/')
+            res.status(200).redirect('/players')
         }
     })
 }
@@ -55,7 +55,7 @@ const createNewPlayer = (req, res) => {
 //             console.log(seed.players)
 //             // Data has been successfully deleted
 //             // Now use seed data to repopulate the database
-//             Fruit.create(seed.players, (err, createdPlayer) => {
+//             Player.create(seed.players, (err, createdPlayer) => {
 //                 if (err) {
 //                     res.status(400).json(err)
 //                 } else {
@@ -110,7 +110,7 @@ const updateOnePlayer = (req, res) => {
         if (err) {
             res.status(400).json(err)
         } else {
-            res.status(200).redirect(`/${req.params.id}`)
+            res.status(200).redirect(`/players/${req.params.id}`)
         }
     })
 }
@@ -119,13 +119,13 @@ const updateOnePlayer = (req, res) => {
 // ROUTE       DELETE /players/:id      (destroy)
 const deleteOnePlayer = (req, res) => {
     // console.log('in delete route')
-    // res.send('Deleting a fruit at index! (in DB)')
+    // res.send('Deleting a player at index! (in DB)')
     
     Player.findByIdAndDelete(req.params.id, (err, deletedPlayer) => {
         if (err) {
             res.status(400).json(err)
         } else {
-            res.status(200).redirect('/')
+            res.status(200).redirect('/players')
         }
     })
 }

@@ -1,33 +1,36 @@
 const React = require('react');
-const DefaultLayout = require('../layouts/DefaultLayout');
+const DefaultLayout = require('./layouts/DefaultLayout');
 
 // class component
 class Show extends React.Component {
 
     render() {
         
-        const { fruit } = this.props
+        const { player } = this.props
 
         return (
-            <DefaultLayout title={`${fruit.name} details`} foodGroup="fruits">
+            <DefaultLayout title={`${player.name} details`} group="players">
                 <h1>Show Page</h1>
                 <p>
-                    The {fruit.name} is {fruit.color}.
+                <img src={player.playerImg} href={`/players/${player._id}`}/>
                 </p>
                 <p>
-                    {fruit.readyToEat ? "It is ready to eat!" : "It is NOT ready to eat... :("}
+                <a href={`/players/${player._id}`}>{player.name}</a> was born on {player.date}. {player.name} nationality is {player.nationality} and their field position is a {player.position}
+                </p>
+                <p>
+                    {player.available ? "Player is currently available to hire!" : "Player is not available anymore."}
                 </p>
 
                 <button>
-                    <a href={`/fruits/${fruit._id}/edit`}>Edit</a>
+                    <a href={`/players/${player._id}/edit`}>Edit</a>
                 </button>
 
-                <form action={`/fruits/${fruit._id}?_method=DELETE`} method="POST">
+                <form action={`/players/${player._id}?_method=DELETE`} method="POST">
                     <input type="submit" value="Delete" />
                 </form>
 
                 <nav>
-                    <a href="/fruits">Back</a>
+                    <a href="/players">Back</a>
                 </nav>
             </DefaultLayout>
         )

@@ -6,6 +6,7 @@ const Schema = mongoose.Schema
 
 // create our Schema
 const playerSchema = new Schema({
+    playerImg: {type: String},
     name: { type: String, required: true }, 
     date: { type: String, required: true },
     nationality: { type: String, required: true },  
@@ -14,7 +15,7 @@ const playerSchema = new Schema({
 })
 
 // create a Model from our Schema
-const Fruit = mongoose.model('Player', playerSchema)
+const Player = mongoose.model('Player', playerSchema)
 
 // export our Model
 module.exports = Player;

@@ -10,7 +10,7 @@ class DefaultLayout extends React.Component {
                 </head>
                 <body>
                     <nav>
-                        <a href={`/${this.props.foodGroup}`}>{this.props.foodGroup}</a>
+                        <a href={`/${this.props.group}`}>{this.props.group}</a>
                     </nav>
                     {this.props.children}
                 </body>
