@@ -14,10 +14,11 @@ class Index extends React.Component {
                     <ul id="players-index">
                         {players.map((player) => {
                             return (
-                                <li key={player._id}>
-                                    <img src={player.playerImg} href={`/players/${player._id}`}/><br/>
-                                    <a href={`/players/${player._id}`}>{player.name}</a><br/>
-                                    Position: {player.position}<br/>
+                                <li class="box" key={player._id}>
+                                    <img src={player.playerImg} height='200'/><br/>
+                                    <div>{player.name}</div><br/>
+                                    <div>Position: {player.position}</div><br/>
+                                    <button class="button" type="button" value="MORE"><a href={`/players/${player._id}`}>More</a></button>
                                 </li>
                             )
                         })}

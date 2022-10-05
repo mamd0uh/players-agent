@@ -15,14 +15,22 @@ class Show extends React.Component {
                 <img src={player.playerImg} href={`/players/${player._id}`}/>
                 </p>
                 <p>
-                <a href={`/players/${player._id}`}>{player.name}</a> was born on {player.date}. {player.name} nationality is {player.nationality} and their field position is a {player.position}
+                <a href={`/players/${player._id}`}>{player.name}</a> was born on {player.date}. {player.name}'s nationality is {player.nationality} and their field position is a {player.position}
                 </p>
                 <p>
                     {player.available ? "Player is currently available to hire!" : "Player is not available anymore."}
                 </p>
 
-                <button>
+                <button class="button">
                     <a href={`/players/${player._id}/edit`}>Edit</a>
+                </button>
+
+                <button class="button">
+                    <a href={`/players/${player._id}/edit`}>Hire</a>
+                </button>
+
+                <button class="button">
+                    <a href={`/players/contact-us`}>Requet more info!</a>
                 </button>
 
                 <form action={`/players/${player._id}?_method=DELETE`} method="POST">
