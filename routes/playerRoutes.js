@@ -11,6 +11,7 @@ const {
     createNewPlayer,
     showOnePlayer,
     showEditView,
+    hirePlayer,
     updateOnePlayer,
     deleteOnePlayer, 
 } = require('../controllers/playerController')
@@ -36,6 +37,9 @@ router.post('/', createNewPlayer)
 
 // Setup "edit" route
 router.get('/:id/edit', showEditView)
+
+// Setup "Hire" route
+router.patch('/:id/hire', hirePlayer)
 
 // // Setup "seed" route
 // router.get('/seed', seedStarterData)

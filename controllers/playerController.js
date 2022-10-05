@@ -115,6 +115,18 @@ const updateOnePlayer = (req, res) => {
     })
 }
 
+//Hire Player
+const hirePlayer = (req,res) => {
+            console.log("working 2")
+    Player.findOneAndUpdate({_id: req.params.id},{'available' : false}, (err, updatedProduct) => {
+        console.log("Working")
+        if (err){
+            res.status(400).json(err)
+        } else {
+            res.status(200).redirect(`/players/${req.params.id}`)
+        }
+    })
+}
 
 // ROUTE       DELETE /players/:id      (destroy)
 const deleteOnePlayer = (req, res) => {
@@ -148,5 +160,6 @@ module.exports = {
     showOnePlayer,
     showEditView,
     updateOnePlayer,
+    hirePlayer,
     deleteOnePlayer, 
 }
