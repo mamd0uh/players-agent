@@ -108,6 +108,7 @@ html {
   /*Boxes*/
   .box {
     display: flex;
+    flex-direction: column;
     float: left;
     padding: 1.5em 1em;
     align-items: center;

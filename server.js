@@ -26,7 +26,9 @@ app.use(express.static("public"))
 app.use(methodOverride("_method"))
 app.use(express.json())
 
-
+app.get('/',(req,res) => {
+    res.redirect("/players")
+})
 app.use('/players', playerRoutes)
 
 // Listen to port
