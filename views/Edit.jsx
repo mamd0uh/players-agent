@@ -7,29 +7,33 @@ class Edit extends React.Component {
         let { player } = this.props
 
         return (
-            <DefaultLayout title="edit a player" group="players">
-                <h1>Edit Page</h1>
+            <DefaultLayout title="Edit a player" group="players">
+                <h1>Edit Information</h1>
                 <form action={`/players/${player._id}?_method=PUT`} method="POST">
+               
+               
+                <div className='edit'>
 
-                    <label htmlFor="name">Name:</label>
-                    <input type="text" id="name" name="name" defaultValue={player.name} />
+                <div className="input"><label htmlFor="name" className="label">Name:</label>
+                    <input type="text" id="name" name="name" defaultValue={player.name} /></div> 
 
-                    <label htmlFor="date">Date:</label>
-                    <input type="text" id="date" name="date" defaultValue={player.date} />
+                    <div className="input"><label htmlFor="date" className="label">Date of Birth:</label>
+                    <input type="text" id="date" name="date" defaultValue={player.date} /></div> 
 
-                    <label htmlFor="nationality">Nationality:</label>
-                    <input type="text" id="nationality" name="nationality" defaultValue={player.nationality} />
+                    <div className="input"><label htmlFor="nationality" className="label">Nationality:</label>
+                    <input type="text" id="nationality" name="nationality" defaultValue={player.nationality} /></div> 
 
-                    <label htmlFor="position">Position:</label>
-                    <input type="text" id="position" name="position" defaultValue={player.position} />
+                    <div className="input"><label htmlFor="position" className="label">Position:</label>
+                    <input type="text" id="position" name="position" defaultValue={player.position} /></div> 
 
-                    <label htmlFor="playerImg">Player's image:</label>
-                    <input type="text" id="playerImg" name="playerImg" defaultValue={player.playerImg}/>
+                    <div className="input"><label htmlFor="playerImg" className="label">Player's image:</label>
+                    <input type="text" id="playerImg" name="playerImg" defaultValue={player.playerImg}/></div> 
 
-                    <label htmlFor="available">Available:</label>
-                    <input type="checkbox" id="available" name="available" defaultChecked={player.available} />
+                    <div className="input"><label htmlFor="available">Available:</label>
+                    <input type="checkbox" id="available" name="available" defaultChecked={player.available}/></div> 
 
-                    <input type="submit" value="Edit Player"/>
+                    <div className="input"><input className="btn" type="submit" value="Edit Player"/></div> 
+                    </div>
                 </form>
             </DefaultLayout>
         )

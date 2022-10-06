@@ -122,9 +122,7 @@ const updateOnePlayer = (req, res) => {
 
 //Hire Player
 const hirePlayer = (req,res) => {
-            console.log("working 2")
     Player.findOneAndUpdate({_id: req.params.id},{'available' : false}, (err, updatedProduct) => {
-        console.log("Working")
         if (err){
             res.status(400).json(err)
         } else {
