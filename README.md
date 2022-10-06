@@ -19,8 +19,15 @@ The following techniques were used in the making of the website:
 
 ## Installation
 
-* You will need to install the following packages: 
-*
+* You will need to install the following packages:
+  * dotenv
+  * express
+  * express-react-views
+  * method-override
+  * mongoose
+  * react
+  * react-dom
+* You will need to make an .env file and put the Port and MongoDB connection string 
 
 ## Routes
 
