@@ -18,7 +18,7 @@ class Contact extends React.Component {
                 <div className="formbold-form-wrapper">
                     <form action="mailto:mamdouh.elmalah@gmail.com" method="POST">
                     <div className="formbold-mb-5">
-                        <label for="name" className="formbold-form-label"> Full Name </label>
+                        <label htmlFor="name" className="formbold-form-label"> Full Name </label>
                         <input
                         type="text"
                         name="name"
@@ -29,7 +29,7 @@ class Contact extends React.Component {
                     </div>
 
                     <div className="formbold-mb-5">
-                        <label for="email" className="formbold-form-label"> Email Address </label>
+                        <label htmlFor="email" className="formbold-form-label"> Email Address </label>
                         <input
                         type="email"
                         name="email"
@@ -40,7 +40,7 @@ class Contact extends React.Component {
                     </div>
 
                     <div className="formbold-mb-5">
-                        <label for="subject" className="formbold-form-label"> Subject </label>
+                        <label htmlFor="subject" className="formbold-form-label"> Subject </label>
                         <input
                         type="text"
                         name="subject"
@@ -51,7 +51,7 @@ class Contact extends React.Component {
                     </div>
 
                     <div className="formbold-mb-5">
-                        <label for="message" className="formbold-form-label"> Message </label>
+                        <label htmlFor="message" className="formbold-form-label"> Message </label>
                         <textarea
                         rows="6"
                         name="message"

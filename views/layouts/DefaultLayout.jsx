@@ -25,9 +25,9 @@ class DefaultLayout extends React.Component {
                 </body>
 
                 <footer>
-                <p class="copy">&copy; Mamdouh Elmallah 2022 — Per Scholas </p>
+                <p className="copy">&copy; Mamdouh Elmallah 2022 — Per Scholas </p>
                 </footer>
-                <div class="line"></div>
+                <div className="line"></div>
 
 
             </html>

@@ -24,7 +24,7 @@ class Index extends React.Component {
                         })}
                     </ul>
 
-                    <section class="sec-partners" role="section">
+                    <section className="sec-partners" role="section">
       <hr />
       <h1>Our Partners</h1>
       <div className="row">
