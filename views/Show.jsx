@@ -1,7 +1,7 @@
 const React = require('react');
 const DefaultLayout = require('./layouts/DefaultLayout');
 
-// className component
+// class component
 class Show extends React.Component {
 
     render() {
@@ -18,33 +18,31 @@ class Show extends React.Component {
                 <a href={`/players/${player._id}`}>{player.name}</a> was born on {player.date}. {player.name}'s nationality is {player.nationality} and their field position is a {player.position}
                 </p>
                 <p>
-                    {player.available ? "Player is currently available to hire!" : "Player is not available anymore."}
+                    {player.available ? "Player is currently available to hire! ✅ "  : "Player is not available anymore ❌"}
                 </p>
 
-                <button className="button">
-                    <a href={`/players/${player._id}/edit`}>Edit</a>
-                </button>
+                <div className='container'>
 
-            
 
-                    <form action={`/players/${player._id}/hire?_method=PATCH`} method="POST">
 
+                    <button className="button" id="showButtons">
+                        <a href={`/players/contact-us`}>Requet more info!</a>
+                    </button>
+
+                    <form className="form" id="showButtons" action={`/players/${player._id}/hire?_method=PATCH`} method="POST">
                     <input type="submit" value="Hire" />
-
                     </form>
-               
+                        
+                    <button className="button" id="showButtons">
+                        <a href={`/players/${player._id}/edit`}>Edit</a>
+                    </button>               
 
-                <button className="button">
-                    <a href={`/players/contact-us`}>Requet more info!</a>
-                </button>
+                    <form className="form" id="showButtons" action={`/players/${player._id}?_method=DELETE`} method="POST">
+                        <input type="submit" value="Delete" />
+                    </form>
 
-                <form action={`/players/${player._id}?_method=DELETE`} method="POST">
-                    <input type="submit" value="Delete" />
-                </form>
+                </div>
 
-                <nav>
-                    <a href="/players">Back</a>
-                </nav>
             </DefaultLayout>
         )
     }

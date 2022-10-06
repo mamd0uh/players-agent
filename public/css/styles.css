@@ -43,11 +43,12 @@ html {
     transition: color 0.25s;
   }
   
-  .button {
+  .button, .form, input[type=submit] {
     display: block;
     padding: 0.75em 1.25em;
     font-size: 1em;
     font-weight: bold;
+    size: 50px;
     text-transform: uppercase;
     background: #ad0000;
     color: #fff;
@@ -59,6 +60,35 @@ html {
   }
   .button:active {
     background: #c10000;
+  }
+
+  .form:focus, .form:hover {
+    background: #890000;
+  }
+  .form:active {
+    background: #c10000;
+  }
+
+  input[type=submit]:focus, input[type=submit]:hover {
+    background: #890000;
+  }
+  input[type=submit]:active {
+    background: #c10000;
+  }
+
+  .container {
+    display:flex;
+    width: 100%;
+    /* outline: #333 solid 2px; */
+  }
+
+  #showButtons {
+    display: flex;
+    width:25%;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
   }
   
   /*Navigation*/
