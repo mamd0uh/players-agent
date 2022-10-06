@@ -18,7 +18,7 @@ class Show extends React.Component {
                 <a href={`/players/${player._id}`}>{player.name}</a> was born on {player.date}. {player.name}'s nationality is {player.nationality} and their field position is a {player.position}
                 </p>
                 <p>
-                    {player.available ? "Player is currently available to hire! ✅ "  : "Player is not available anymore ❌"}
+                    {player.available ? "Player is available for hiring! ✅ "  : "Player is not available anymore ❌"}
                 </p>
 
                 <div className='container'>
@@ -40,6 +40,7 @@ class Show extends React.Component {
                     <form className="form" id="showButtons" action={`/players/${player._id}?_method=DELETE`} method="POST">
                         <input type="submit" value="Delete" />
                     </form>
+
 
                 </div>
 

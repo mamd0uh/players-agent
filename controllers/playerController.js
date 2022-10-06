@@ -24,6 +24,11 @@ const showNewView = (req, res) => {
     res.render('New')
 }
 
+// ROUTE     GET /players/:id     (show)
+const contact = (req, res) => {  
+    res.render('Contact')
+}
+
 // ROUTE     POST /players     (create)
 const createNewPlayer = (req, res) => {
     if (req.body.available === "on") {
@@ -161,5 +166,6 @@ module.exports = {
     showEditView,
     updateOnePlayer,
     hirePlayer,
-    deleteOnePlayer, 
+    deleteOnePlayer,
+    contact 
 }

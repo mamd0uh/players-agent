@@ -13,7 +13,8 @@ const {
     showEditView,
     hirePlayer,
     updateOnePlayer,
-    deleteOnePlayer, 
+    deleteOnePlayer,
+    contact, 
 } = require('../controllers/playerController')
 
 
@@ -25,6 +26,9 @@ router.get('/', findAllPlayers)
 
 // Setup "new" route
 router.get('/new', showNewView)
+
+// Setup "contact" route  
+router.get('/contact', contact)
 
 // Setup "destroy" route
 router.delete('/:id', deleteOnePlayer)
@@ -49,5 +53,6 @@ router.patch('/:id/hire', hirePlayer)
 
 // Setup "show" route  
 router.get('/:id', showOnePlayer)
+
 
 module.exports = router

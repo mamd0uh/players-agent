@@ -4,29 +4,33 @@ const DefaultLayout = require('./layouts/DefaultLayout')
 class New extends React.Component {
     render() {
         return (
-            <DefaultLayout title="create a new player" group="players">
-                <h1>New Page</h1>
+            <DefaultLayout title="Register" group="players">
+
+                <h1>Register with us today!</h1>
+                
                 <form action="/players" method="POST">
+                <div className='create'>
+                    
+                   <div className="input"><label htmlFor="name" className="label">Name:</label>
+                    <input type="text" id="name" name="name" /></div> 
 
-                    <label htmlFor="name">Name:</label>
-                    <input type="text" id="name" name="name" />
+                    <div className="input"><label htmlFor="date" className="label">Date of Birth:</label>
+                    <input type="text" id="date" name="date" /></div> 
 
-                    <label htmlFor="date">Date of Birth:</label>
-                    <input type="text" id="date" name="date" />
+                    <div className="input"><label htmlFor="nationality" className="label">Nationality:</label>
+                    <input type="text" id="nationality" name="nationality" /></div> 
 
-                    <label htmlFor="nationality">Nationality:</label>
-                    <input type="text" id="nationality" name="nationality" />
+                    <div className="input"><label htmlFor="position" className="label">Position:</label>
+                    <input type="text" id="position" name="position" /></div> 
 
-                    <label htmlFor="position">Position:</label>
-                    <input type="text" id="position" name="position" />
+                    <div className="input"><label htmlFor="playerImg" className="label">Player's image:</label>
+                    <input type="text" id="playerImg" name="playerImg" /></div> 
 
-                    <label htmlFor="playerImg">Player's image:</label>
-                    <input type="text" id="playerImg" name="playerImg" />
+                    <div className="input"><label htmlFor="available">Available:</label>
+                    <input type="checkbox" id="available" name="available" /></div> 
 
-                    <label htmlFor="available">Available:</label>
-                    <input type="checkbox" id="available" name="available" />
-
-                    <input type="submit" value="Create Player"/>
+                    <div className="input"><input className="btn" type="submit" value="Create Player"/></div> 
+                </div>
                 </form>
             </DefaultLayout>
         )
